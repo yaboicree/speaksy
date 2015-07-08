@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+
+  root 'main_pages#home'
+  
+  get 'about'   => 'main_pages#about'
+  get 'contact' => 'main_pages#contact'
+  get 'landing' => 'main_pages#landing'
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'application#hello'
+  # root 'MainPages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
