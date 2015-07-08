@@ -1,0 +1,33 @@
+@import "basscss/basscss";
+
+/* navbar */
+
+nav{
+	background-color: #cff;
+	a{
+    color: black;
+		list-style: none;
+		margin: 9px;
+	}
+  /*.button{
+    margin: 9px;
+  }*/
+}
+
+.logo{
+  font-size: 1.7em;
+  color: #009fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  &:hover {
+  color: #8ff;
+  text-decoration: none;
+  }
+  a{
+
+  }
+}
+
+/* body */
+
