@@ -10,4 +10,7 @@ class MainPagesController < ApplicationController
 
   def landing
   end
+
+  def contribute
+  end
 end

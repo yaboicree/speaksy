@@ -1,7 +1,11 @@
 <header>
 	<nav class="clearfix center">
-		<a href="#" class="logo m1 left">Speaksy</a>
-		<a href="#" class="btn m1 right">Log In</a>
-		<a href="#" class="btn m1 right">Sign Up</a>
+		<%= link_to "Speaksy", 	root_path, :class => "logo m1 left" %>		
+		<% if user_signed_in? %>
+			<%= link_to "Log out", destroy_user_session_path, method: "delete", :class => "btn m1 right" %>
+		<% else %>
+				<%= link_to "Sign Up", 	new_user_registration_path, :class => "btn m1 right" %>
+				<%= link_to "Log In", 	new_user_session_path, :class => "btn m1 right" %>
+		<% end %>
 	</nav>
 </header>

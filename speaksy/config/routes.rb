@@ -2,9 +2,10 @@ Rails.application.routes.draw do
 
   root 'main_pages#home'
   
-  get 'about'   => 'main_pages#about'
-  get 'contact' => 'main_pages#contact'
-  get 'landing' => 'main_pages#landing'
+  get 'about'      => 'main_pages#about'
+  get 'contact'    => 'main_pages#contact'
+  get 'landing'    => 'main_pages#landing'
+  get 'donate'     => 'main_pages#donate'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
