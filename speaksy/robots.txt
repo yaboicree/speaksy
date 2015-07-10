@@ -1,0 +1,1 @@
+User-agent: * Disallow: /relative-path-to-speaksy
