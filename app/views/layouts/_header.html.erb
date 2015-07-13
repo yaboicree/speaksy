@@ -1,11 +1,17 @@
 <header>
 	<nav class="clearfix bg-aqua">
-		<%= link_to "Speaksy", 	root_path, :class => "logo h2 caps left m1 bold " %>		
-		<% if user_signed_in? %>
-			<%= link_to "Log out", destroy_user_session_path, method: "delete", :class => "button button-transparent right m1" %>
-		<% else %>
-				<%= link_to "Log In", 	new_user_session_path, :class => "button button-transparent right m1" %>
-				<%= link_to "Sign Up", 	new_user_registration_path, :class => "button button-primary right m1" %>
-		<% end %>
+		<div class="container">
+
+			<%= link_to "Speaksy", 	root_path, :class => "logo h2 caps left m1 bold " %>		
+
+			<% if user_signed_in? %>
+				<%= link_to "Log out", destroy_user_session_path, method: "delete", :class => "button button-transparent right m1" %>
+
+			<% else %>
+					<%= link_to "Log In", 	new_user_session_path, :class => "button button-transparent right m1" %>
+					<%= link_to "Sign Up", 	new_user_registration_path, :class => "button button-primary right m1" %>
+			<% end %>
+			
+		</div>
 	</nav>
 </header>

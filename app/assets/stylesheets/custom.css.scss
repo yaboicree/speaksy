@@ -24,3 +24,16 @@
 
 /* forms */
 
+.field {
+  border-style: solid;
+  border-width: var(--border-width);
+  border-color: var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.field:focus,
+.field.is-focused {
+  outline: none;
+  border-color: var(--field-focus-color);
+  box-shadow: 0 0 0 2px color(var(--field-focus-color) a(.5));
+}
