@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'contact'    => 'main_pages#contact'
   get 'landing'    => 'main_pages#landing'
   get 'donate'     => 'main_pages#donate'
+  get 'study'      => 'main_pages#study'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

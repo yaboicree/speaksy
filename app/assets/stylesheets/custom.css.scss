@@ -12,6 +12,35 @@
 
 /* body */
 
+.tooltip{
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 0px 6px 6px 6px;
+    bottom: -7px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: -97px;
+    color: #fff;
+    content: attr(title);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
 /* footer */
 
 #footer {
@@ -24,7 +53,7 @@
 
 /* forms */
 
-.field {
+/*.field {
   border-style: solid;
   border-width: var(--border-width);
   border-color: var(--border-color);
@@ -34,6 +63,6 @@
 .field:focus,
 .field.is-focused {
   outline: none;
-  border-color: var(--field-focus-color);
+  border-color: #3bf;
   box-shadow: 0 0 0 2px color(var(--field-focus-color) a(.5));
-}
+}*/

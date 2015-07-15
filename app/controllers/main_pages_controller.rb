@@ -13,4 +13,7 @@ class MainPagesController < ApplicationController
 
   def contribute
   end
+
+  def study
+  end
 end
