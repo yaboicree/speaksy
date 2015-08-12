@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'vocabs/new'
+
+  get 'lessons/new'
+
+  get 'chapters/new'
+  post 'chapters/create'
+  get 'chapters/index'
+
   root 'main_pages#home'
   
   get 'about'      => 'main_pages#about'
