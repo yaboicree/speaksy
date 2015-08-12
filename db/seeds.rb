@@ -19,3 +19,6 @@ chapter = Chapter.first
 chapter.lessons.create!(name: "Lesson 0")
 
 #Vocab.create()
+# chapter.lessons.first.vocabs.create!(#array of vocab we wanted
+# 	)
+#chapter.lessons.first. will select chapter 0 lesson 0

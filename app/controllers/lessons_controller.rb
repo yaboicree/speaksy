@@ -13,6 +13,10 @@ class LessonsController < ApplicationController
 
   def create
 		chapter = Chapter.first
+############# ^^^^^ this above line is fucked.... should select the parent of the lesson
+#possible temporary solution: select the chapter in a dropdown list...
+#root issue: dont know how/ if possible to track the previous pages a user has been on... maybe need to write more code for this
+
   	#need to write a method to find the chapter of a lesson????????? not sure how to tie to each other
   	@lesson = chapter.lessons.create!(lesson_params)
 		if @lesson.save
