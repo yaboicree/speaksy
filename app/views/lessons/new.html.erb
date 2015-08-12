@@ -1,2 +1,12 @@
-<h1>Lessons#new</h1>
-<p>Find me in app/views/lessons/new.html.erb</p>
+<h1>Create a Lesson</h1>
+
+<p>Need some way to create grammar points, vocab, etc...</p>
+
+<div>
+  <%= form_for(@lesson) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.submit "Save Lesson" %>
+  <% end %>
+</div>

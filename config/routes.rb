@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'study'      => 'main_pages#study'
 
   resources :chapters
+  resources :lessons
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

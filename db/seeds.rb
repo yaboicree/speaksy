@@ -15,7 +15,7 @@
 Chapter.create!(name: "Chapter #{n}")
 end
 
-#Lesson.create!(name: "Lesson 0"
-#								)
+chapter = Chapter.first
+chapter.lessons.create!(name: "Lesson 0")
 
 #Vocab.create()
