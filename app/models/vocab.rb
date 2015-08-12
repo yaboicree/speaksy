@@ -1,3 +1,3 @@
 class Vocab < ActiveRecord::Base
-  belongs_to :vocablist
+  belongs_to :vocab_list
 end

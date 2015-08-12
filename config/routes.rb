@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
   get 'lessons/new'
 
-  get 'chapters/new'
-  post 'chapters/create'
-  get 'chapters/index'
+  # get 'chapters/new'
+  # post 'chapters/create'
+  get 'chapters/index' 
+  # get 'chapters/show'
 
   root 'main_pages#home'
   
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   get 'landing'    => 'main_pages#landing'
   get 'donate'     => 'main_pages#donate'
   get 'study'      => 'main_pages#study'
+
+  resources :chapters
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

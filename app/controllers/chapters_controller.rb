@@ -14,6 +14,7 @@ class ChaptersController < ApplicationController
   #need to install a pagination gem
 
   def new 					#display chapter creation view
+  	@chapter = Chapter.new
   end
 
   def create				#create chapter

@@ -3,8 +3,9 @@
 <ul class="chapters">
 		<% @chapters.each do |chapter| %>
 			<li>
-				<%= chapter.name %>
-				<!-- NEED TO MAKE THIS INTO A LINK TO CHAPTER PAGE -->
+				<%= link_to chapter.name, chapter %>
 			</li>
 		<% end %>
 </ul>
+
+<%= link_to "New Chapter", new_chapter_path %>
