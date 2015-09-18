@@ -1,0 +1,2 @@
+module VocablistsHelper
+end
