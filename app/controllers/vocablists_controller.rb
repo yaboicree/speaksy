@@ -3,6 +3,7 @@ class VocablistsController < ApplicationController
 	end
 
 	def create
+		@vocablist = @lesson.vocablists.create!(vocab_list_params)
 	end
 
 	def show
@@ -11,8 +12,8 @@ class VocablistsController < ApplicationController
 
 	private
 
-  	#def vocablist_params
-  	#	params.require(:vocablist).permit(????)
-		#end
+  	def vocab_list_params
+  		params.require(:vocablist).permit(:name)
+		end
 		##### require that it be associated with a lesson??
 end

@@ -12,13 +12,11 @@ class LessonsController < ApplicationController
   end
 
   def create
-		chapter = Chapter.first
-############# ^^^^^ this above line is fucked.... should select the parent of the lesson
 #... dont know how/ if possible to track the previous pages a user has been on... 
 #possible temporary solution: select the chapter in a dropdown list...
 
   	#need to write a method to find the chapter of a lesson????????? not sure how to tie to each other
-  	@lesson = chapter.lessons.create!(lesson_params)
+  	@lesson = Lesson.create!(lesson_params)
 		if @lesson.save
 			flash[:success] = "Lesson created!"
 			redirect_to @lesson
@@ -36,7 +34,7 @@ class LessonsController < ApplicationController
   private
 
   	def lesson_params
-  		params.require(:lesson).permit(:name)
+  		params.require(:lesson).permit(:name, :chapter_id)
 		end
 
 end
