@@ -13,10 +13,14 @@ class LessonsController < ApplicationController
 
   def create
 #... dont know how/ if possible to track the previous pages a user has been on... 
+# santi: what is this for? can be done w session id and clientside temp data
 #possible temporary solution: select the chapter in a dropdown list...
 
   	#need to write a method to find the chapter of a lesson????????? not sure how to tie to each other
-  	@lesson = Lesson.create!(lesson_params)
+    #@chree lesson.chapter_id works i think, lesson.chapter gives the object p sure
+
+  	@lesson = Lesson.create(lesson_params)
+
 		if @lesson.save
 			flash[:success] = "Lesson created!"
 			redirect_to @lesson

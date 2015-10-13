@@ -7,7 +7,7 @@ class VocablistsController < ApplicationController
 	end
 
 	def show
-		@list = Vocablist.find(params[:id]
+		@list = Vocablist.find(params[:id])
 	end
 
 	private
