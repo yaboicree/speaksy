@@ -4,6 +4,7 @@ class VocablistsController < ApplicationController
 
 	def create
 		@vocablist = @lesson.vocablists.create!(vocab_list_params)
+		# how do vocabs get associated with vocablists? is it when they are created?
 	end
 
 	def show

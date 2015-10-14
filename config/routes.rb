@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :chapters
   resources :lessons
   resources :vocab_lists
-
+## might not need to create resources for all of the objects... but i dont think it causes any problems (maybe a security hole)
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
