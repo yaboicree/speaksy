@@ -3,7 +3,12 @@
 <p>Need some way to create grammar points, vocab, etc...</p>
 
 <div>
-  <%= form_for(@lesson) do |f| %>
+  <%= form_for(@lesson) do |f| %> 
+
+	<!-- submitting this form sends @lesson to the lesson controller create method -->
+  <!-- @lesson = instance variable -->
+  <!-- in rails forms: submit = HTTP post request --> 
+
     <%= f.label :name %>
     <%= f.text_field :name %>
 

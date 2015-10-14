@@ -2,9 +2,9 @@ class LessonsController < ApplicationController
 
 	def show					#show a specific lesson
   	  	@lesson = Lesson.find(params[:id])
+        @vocablists = @lesson.vocab_lists.all
+        @grammar_points = @lesson.grammar_points.all
   end
-  #need to install a pagination gem--- later, might need a more complex/efficient 
-  																									# way to display lessons
 
   def new 					#display lesson creation view
   	@lesson = Lesson.new

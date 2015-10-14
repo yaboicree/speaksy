@@ -8,13 +8,13 @@ class VocabsController < ApplicationController
  		if @vocab == nil
  			@vocab = "nil"
  		end
- 		@vocab = @vocab_lists.vocab.create!(vocab_params)
+ 		@vocab = Vocab.create!(vocab_params)
   end
-# should
+
   private
 
   	def vocab_params
-  		#params.require(:vocab).permit(:word)
+  		params.require(:vocab).permit(:words, :vocab_list_id)
 		end
 
 end

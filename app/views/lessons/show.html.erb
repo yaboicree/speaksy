@@ -3,11 +3,13 @@
 <!-- show lessontext -->
 
 <!-- show vocablist -->
-<%= render @lesson.vocab_lists %>
+<%= render 'vocablists/vocablists' %>
 
 <%= link_to "New Vocab List", new_vocab_list_path %>
+
 <!-- show grammar_points -->
-<%= render @lesson.grammar_points %>
+
+<%= render 'grammar_points/grammar_points' %>
 
 <!-- show exercises -->
 
