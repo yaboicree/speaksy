@@ -1,0 +1,7 @@
+<ol class="grammarpoints">
+		<% @grammar_points.each do |gp| %>
+			<li>
+				<%= link_to gp.name, gp %>
+			</li>
+		<% end %>
+</ol>

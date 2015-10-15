@@ -1,0 +1,20 @@
+<h1>Create a Lesson</h1>
+
+<p>Need some way to create grammar points, vocab, etc...</p>
+
+<div>
+  <%= form_for(@lesson) do |f| %> 
+
+	<!-- submitting this form sends @lesson to the lesson controller create method -->
+  <!-- @lesson = instance variable -->
+  <!-- in rails forms: submit = HTTP post request --> 
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :chapter_id %>
+    <%= collection_select(:lesson, :chapter_id, Chapter.all, :id, :name, prompt: true) %>
+
+    <%= f.submit "Save Lesson" %>
+  <% end %>
+</div>

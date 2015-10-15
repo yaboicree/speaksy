@@ -1,0 +1,17 @@
+<h1><%= @lesson.name %></h1>
+
+<!-- show lessontext -->
+
+<!-- show vocablist -->
+<%= render 'vocab_lists/vocab_lists' %>
+
+<%= link_to "New Vocab List", new_vocab_list_path %>
+
+<!-- show grammar_points -->
+
+<%= render 'grammar_points/grammar_points' %>
+
+<!-- show exercises -->
+
+<%= link_to "Create New Content", '#' %>
+<!-- (need to write methods to create vocab, grammar points etc. to make this link/form... for the future) -->

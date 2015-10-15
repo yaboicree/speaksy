@@ -1,0 +1,11 @@
+<h1>welcome to the chapters ya binger</h1>
+
+<ul class="chapters">
+		<% @chapters.each do |chapter| %>
+			<li>
+				<%= link_to chapter.name, chapter %>
+			</li>
+		<% end %>
+</ul>
+
+<%= link_to "New Chapter", new_chapter_path %>

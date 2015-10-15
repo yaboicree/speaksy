@@ -5,3 +5,26 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+#User.create!(name: "example"
+#						 email: "example@example.com"
+#						 encrypted_password: "password") 
+						 ## need to google how to create seed data with Devise... this probably wont work
+
+12.times do |n|
+Chapter.create!(name: "Chapter #{n}")
+end
+
+chapter = Chapter.first
+chapter.lessons.create!(name: "Lesson 0")
+
+VocabList.create!({lesson_id: 1, name: "Basic Phrases"})
+
+Vocab.create!({vocab_list_id: 1, en: "Good Morning", jp: "Ohayou"})
+Vocab.create!({vocab_list_id: 1, en: "Good Evening", jp: "こんばんは"})
+Vocab.create!({vocab_list_id: 1, en: "Japan", jp: "日本"})
+
+#Vocab.create()
+# chapter.lessons.first.vocabs.create!(#array of vocab we wanted
+# 	)
+#chapter.lessons.first. will select chapter 0 lesson 0

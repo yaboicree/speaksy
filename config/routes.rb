@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'vocabs/new'
+
+  get 'lessons/new'
+
+  # get 'chapters/new'
+  # post 'chapters/create'
+  get 'chapters/index' 
+  # get 'chapters/show'
+
   root 'main_pages#home'
   
   get 'about'      => 'main_pages#about'
@@ -8,6 +17,11 @@ Rails.application.routes.draw do
   get 'donate'     => 'main_pages#donate'
   get 'study'      => 'main_pages#study'
 
+  resources :chapters
+  resources :lessons
+  resources :vocab_lists
+  resources :vocablists
+## might not need to create resources for all of the objects... but i dont think it causes any problems (maybe a security hole)
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
