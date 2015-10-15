@@ -1,7 +1,7 @@
-<ol class="vocabs">
+<ul class="vocabs">
 		<% @vocabs.each do |vk| %>
 			<li>
-				<%= puts vk.words %>
+				<%= vk.jp + " means " + vk.en %>
 			</li>
 		<% end %>
-</ol>
+</ul>
