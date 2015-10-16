@@ -7,7 +7,7 @@ class GrammarPointsController < ApplicationController
 	end
 
 	def show
-		@list = GrammarPoint.find(params[:id]
+		@list = GrammarPoint.find(params[:id])
 	end
 
 	private
