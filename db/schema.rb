@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150919173606) do
+ActiveRecord::Schema.define(version: 20151015184224) do
 
   create_table "chapters", force: :cascade do |t|
     t.string   "name"
@@ -67,12 +67,16 @@ ActiveRecord::Schema.define(version: 20150919173606) do
   add_index "vocab_lists", ["lesson_id"], name: "index_vocab_lists_on_lesson_id"
 
   create_table "vocabs", force: :cascade do |t|
-    t.string   "word"
     t.integer  "vocablist_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "vocab_list_id"
+    t.string   "jp"
+    t.string   "en"
+    t.integer  "formality"
   end
 
+  add_index "vocabs", ["vocab_list_id"], name: "index_vocabs_on_vocab_list_id"
   add_index "vocabs", ["vocablist_id"], name: "index_vocabs_on_vocablist_id"
 
 end

@@ -4,7 +4,7 @@ class CreateVocabs < ActiveRecord::Migration
       t.string :word
       t.references :vocablist, index: true
 
-      t.timestamps null: false
+      t.timestamps null: true
     end
     add_foreign_key :vocabs, :vocablists
   end

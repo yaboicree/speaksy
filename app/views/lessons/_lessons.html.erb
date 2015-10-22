@@ -1,0 +1,8 @@
+<ol class="lessons">
+		<% @lessons.each do |lesson| %>
+			<li>
+				<%= link_to lesson.name, lesson %>
+				<!-- NEED TO MAKE THIS INTO A LINK TO LESSON PAGE -->
+			</li>
+		<% end %>
+</ol>

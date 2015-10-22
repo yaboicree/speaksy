@@ -1,0 +1,7 @@
+<ol class="vocablists">
+		<% @vocablists.each do |vl| %>
+			<li>
+				<%= link_to vl.name, vl %>
+			</li>
+		<% end %>
+</ol>

@@ -39,8 +39,11 @@ class ChaptersController < ApplicationController
 
 
   def update
-  	#NEED TO WRITE THIS METHOD
+  	#NEED TO WRITE THIS METHOD 
+    @chapter = Chapter.find(params[:id])
+    #after:??? not sure...
   end
+
 
   private
 

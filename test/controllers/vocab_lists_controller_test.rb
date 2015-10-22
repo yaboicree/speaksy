@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class VocablistsControllerTest < ActionController::TestCase
+class VocabListsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end
