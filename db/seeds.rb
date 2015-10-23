@@ -24,7 +24,10 @@ Vocab.create!({vocab_list_id: 1, en: "Good Morning", jp: "Ohayou"})
 Vocab.create!({vocab_list_id: 1, en: "Good Evening", jp: "こんばんは"})
 Vocab.create!({vocab_list_id: 1, en: "Japan", jp: "日本"})
 
-#Vocab.create()
-# chapter.lessons.first.vocabs.create!(#array of vocab we wanted
-# 	)
-#chapter.lessons.first. will select chapter 0 lesson 0
+
+###for some reason this is creating two identical grammar points
+GrammarPoint.create!({lesson_id: 1, content: 'は is the topic marker particle. This means that は (pronounced "wa") can mark the subject of the sentence (the actor) or the subject being discussed.
+
+Example: 
+"I am a student." 
+私は学生です。'})

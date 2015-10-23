@@ -1,12 +1,16 @@
 class VocabListsController < ApplicationController
-def new
-		#make this method if we want a web form to make a vocablist
-		@vocablist = Vocablist.new
+	def new
+		@vocab_list = VocabList.new
 	end
 
 	def create
-		## lesson associated w vocablist will 
 		@vocab_list = VocabList.create!(vocablist_params)
+		if @vocab_list.save
+			flash[:success] = "List created!"
+			redirect_to @vocab_list
+		else
+			flash[:error] = "failed to save"
+		end
 	end
 
 	def show
@@ -17,7 +21,7 @@ def new
 	private
 
   	def vocablist_params
-  		params.require(:vocablist).permit(:name, :lesson_id)
+  		params.require(:vocab_list).permit(:name, :lesson_id)
 		end
 		##### require that it be associated with a lesson??
 end

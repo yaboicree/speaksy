@@ -11,7 +11,7 @@
     <%= f.text_field :name %>
 
     <%= f.label :lesson_id %>
-    <%= collection_select(:lesson, :lesson_id, Lesson.all, :id, :name, prompt: true) %>
+    <%= collection_select(:vocab_list, :lesson_id, Lesson.all, :id, :name, prompt: true) %>
 
     <%= f.submit "Save List" %>
   <% end %>

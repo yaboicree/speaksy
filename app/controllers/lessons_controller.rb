@@ -2,7 +2,7 @@ class LessonsController < ApplicationController
 
 	def show					#show a specific lesson
   	  	@lesson = Lesson.find(params[:id])
-        @vocablists = @lesson.vocab_lists.all
+        @vocab_lists = @lesson.vocab_lists.all
         @grammar_points = @lesson.grammar_points.all
   end
 

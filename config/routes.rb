@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'vocabs/new'
+  get 'new_vocab' => 'vocabs#new'
+  post 'vocabs'=>'vocabs#create'
 
   get 'lessons/new'
 
-  get 'grammarpoints/new'
+  get 'new_grammar_point' => 'grammar_points#new'
+  post 'grammar_points'=>'grammar_points#create'
 
   # get 'chapters/new'
   # post 'chapters/create'
@@ -22,7 +24,6 @@ Rails.application.routes.draw do
   resources :chapters
   resources :lessons
   resources :vocab_lists
-  resources :vocablists
 
 ## might not need to create resources for all of the objects... but i dont think it causes any problems (maybe a security hole)
   devise_for :users
