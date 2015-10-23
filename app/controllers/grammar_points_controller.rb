@@ -1,9 +1,11 @@
 class GrammarPointsController < ApplicationController
 
 	def new
+		@grammar_point = GrammarPoint.new
 	end
 
 	def create
+		@grammar_point = GrammarPoint.create!(grammar_point_params)
 	end
 
 	def show
@@ -12,8 +14,7 @@ class GrammarPointsController < ApplicationController
 
 	private
 
-  	#def grammar_point_params
-  	#	params.require(:grammar_point).permit(????)
-		#end
-		##### require that it be associated with a lesson??
+  	def grammar_point_params
+  		params.require(:grammar_point).permit(:name, :lesson_id)
+		end
 end

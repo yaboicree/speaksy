@@ -1,0 +1,18 @@
+<h1>Create a list of vocab words</h1>
+
+<div>
+  <%= form_for(@vocab_list) do |f| %> 
+
+	<!-- submitting this form sends @vocab_list to the vocab_list controller create method -->
+  <!-- @vocab_list = instance variable -->
+  <!-- in rails forms: submit = HTTP post request --> 
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :lesson_id %>
+    <%= collection_select(:lesson, :lesson_id, Lesson.all, :id, :name, prompt: true) %>
+
+    <%= f.submit "Save List" %>
+  <% end %>
+</div>

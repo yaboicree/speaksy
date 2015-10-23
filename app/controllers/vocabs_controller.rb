@@ -1,5 +1,6 @@
 class VocabsController < ApplicationController
   def new
+    @vocab = Vocab.new
   end
 
   def create

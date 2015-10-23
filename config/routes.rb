@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'lessons/new'
 
+  get 'grammarpoints/new'
+
   # get 'chapters/new'
   # post 'chapters/create'
   get 'chapters/index' 
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
   resources :lessons
   resources :vocab_lists
   resources :vocablists
+
 ## might not need to create resources for all of the objects... but i dont think it causes any problems (maybe a security hole)
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

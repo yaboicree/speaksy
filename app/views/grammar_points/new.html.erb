@@ -1,0 +1,18 @@
+<h1>Create a grammar point explanation</h1>
+
+<div>
+  <%= form_for(@grammar_point) do |f| %> 
+
+	<!-- submitting this form sends @grammar_point to the grammar_point controller create method -->
+  <!-- @grammar_point = instance variable -->
+  <!-- in rails forms: submit = HTTP post request --> 
+
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+
+    <%= f.label :lesson_id %>
+    <%= collection_select(:lesson, :lesson_id, Lesson.all, :id, :name, prompt: true) %>
+
+    <%= f.submit "Save Grammar Point" %>
+  <% end %>
+</div>

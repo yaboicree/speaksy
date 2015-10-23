@@ -1,7 +1,9 @@
 <ol class="grammarpoints">
 		<% @grammar_points.each do |gp| %>
 			<li>
-				<%= link_to gp.name, gp %>
+				<%= gp.content %>
+				<!-- shouldnt be a link, should display GP and vocab lists within
+				lesson show page -->
 			</li>
 		<% end %>
 </ol>

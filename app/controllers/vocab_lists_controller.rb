@@ -1,13 +1,12 @@
 class VocabListsController < ApplicationController
 def new
 		#make this method if we want a web form to make a vocablist
-		#@vocablist = Vocablist.new
+		@vocablist = Vocablist.new
 	end
 
 	def create
 		## lesson associated w vocablist will 
-		@vocablist = VocabList.create!(vocablist_params)
-		# how do vocabs get associated with vocablists? is it when they are created?
+		@vocab_list = VocabList.create!(vocablist_params)
 	end
 
 	def show

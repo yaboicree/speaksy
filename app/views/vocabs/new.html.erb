@@ -1,2 +1,21 @@
-<h1>Vocabs#new</h1>
-<p>Find me in app/views/vocabs/new.html.erb</p>
+<h1>Add a vocab word</h1>
+
+<div>
+  <%= form_for(@vocab) do |f| %> 
+
+	<!-- submitting this form sends @vocab to the vocab controller create method -->
+  <!-- @vocab_list = instance variable -->
+  <!-- in rails forms: submit = HTTP post request --> 
+
+    <%= f.label :en %>
+    <%= f.text_field :en %>
+
+    <%= f.label :jp %>
+    <%= f.text_field :jp %>
+
+    <%= f.label :vocab_list_id %>
+    <%= collection_select(:vocab_list, :vocab_list_id, VocabList.all, :id, :name, prompt: true) %>
+
+    <%= f.submit "Add vocab word" %>
+  <% end %>
+</div>
