@@ -8,7 +8,8 @@ class GrammarPointsController < ApplicationController
 		@grammar_point = GrammarPoint.create!(grammar_point_params)
 		if @grammar_point.save
       flash[:success] = "Grammar point created!"
-      #redirect_to @vocab_list ---- needs to redirect to its own vocab list...
+      #redirect_to @vocab_list ---- should redirect to its own vocab list
+      #but I don't know how to do it -chris
       redirect_to chapters_path
     else
       flash[:error] = "failed to save"
