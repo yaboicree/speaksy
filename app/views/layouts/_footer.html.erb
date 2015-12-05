@@ -1,9 +1,12 @@
 <div class="container">
-	<footer class="mt4 bottom-0 absolute border-top right block">
+	<footer class="mt4 center bottom-0 border-top right block">
 
-			<%= link_to "Contribute", 	donate_path, class: "m1 right" %>
-			<%= link_to "Contact Us", 	contact_path, class: "m1 right" %>
-			<%= link_to "About", 	about_path, class: "m1 right" %>
+			<div class="footer center">
+				<%= link_to "Chapters", chapters_path, :class => "button button-primary m1 bg-teal" %>
+				<%= link_to "About", about_path, :class => "button button-primary m1 bg-teal" %>
+				<%= link_to "Study", study_path, :class => "button button-primary m1 bg-teal" %>
+				<%= link_to "Contact", contact_path, :class => "button button-primary m1 bg-teal" %>
+			</div>
 			
 	</footer>
 </div>
