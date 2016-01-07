@@ -14,13 +14,12 @@
 
 .panorama{
     background-image: url("https://images.unsplash.com/photo-1415750465391-51ed29b1e610?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=03e3797b5065c705574ca7983fae7c41");
-    height: 800px;
+    height: 700px;
     width: 100%;
     display: block;
 }
 
 /* body */
-
 
 /*tooltip is used to create a popout box on text*/
 
@@ -57,11 +56,11 @@
 /* footer */
 
 footer {
+/* right now is appearing right after page content, even if too short */ 
  clear: both;
  position: relative;
- z-index: 10;
  height: 3em;
- margin-top: -30em;
+ margin-top: 0em;
  width: 100%;
 }
 
@@ -104,3 +103,10 @@ a.tooltip:hover span{
     border-radius:4px;
     box-shadow: 5px 5px 8px #CCC;
 }*/
+
+/* chapter index */
+
+.chapters{
+  display: inline-block;
+  /* remove bullet point */
+}

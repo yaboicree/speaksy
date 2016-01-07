@@ -1,11 +1,19 @@
-<h1>welcome to the chapters ya binger</h1>
+<h1>Chapters</h1> 
 
-<ul class="chapters">
+<!-- what is a chapter?
+a set of lessons, vocabulary and exercises with a common theme, level or grammar structures 
+is there a better name for this? -->
+
+<div class="chapters">
+	<!-- was a ul containing li's -->
 		<% @chapters.each do |chapter| %>
-			<li>
-				<%= link_to chapter.name, chapter %>
-			</li>
-		<% end %>
-</ul>
+			<p>
+				<%= link_to chapter.name, chapter, {style: "margin-bottom: 8px; color: black; text-decoration: none;"} %>
+				<!-- when chapters can be linked to profiles, add the author's name, information about whether it's editable by everyone, etc -->
 
+				<%= link_to chapter.description, chapter, {style: "margin-left: 20px; display: block; color: #333; text-decoration: none;"} %>
+			</p>
+		<% end %>
+</div>
+</br>
 <%= link_to "New Chapter", new_chapter_path %>
