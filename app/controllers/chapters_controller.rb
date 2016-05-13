@@ -42,10 +42,11 @@ class ChaptersController < ApplicationController
   	#NEED TO WRITE THIS METHOD 
     @chapter = Chapter.find(params[:id])
       if @chapter.update_attributes(chapter_params)
-        
-        @chapter.update(name: "", description: "")
+        flash[:success] = "Profile updated"
+        redirect_to @chapter
+      else 
+        render 'edit'
       end
-    #after:??? not sure...
   end
 
 
