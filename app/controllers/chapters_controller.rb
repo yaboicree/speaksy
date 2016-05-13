@@ -43,7 +43,8 @@ class ChaptersController < ApplicationController
     @chapter = Chapter.find(params[:id])
       if @chapter.update_attributes(chapter_params)
         
-    @chapter.update(name: "", description: "")
+        @chapter.update(name: "", description: "")
+      end
     #after:??? not sure...
   end
 

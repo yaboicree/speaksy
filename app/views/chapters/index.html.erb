@@ -4,17 +4,28 @@
 a set of lessons, vocabulary and exercises with a common theme, level or grammar structures 
 is there a better name for this? -->
 
-<div class="chapters">
+<style>
+	div.char_title {
+		margin-bottom: 8px; color: black; text-decoration: none;		
+	}
+	div.char_desc {
+		margin-left: 20px; display: block; color: #333; text-decoration: none;		
+	}
+</style>
+
+<div class="chapters" style = "width: 100%;">
 	<!-- was a ul containing li's -->
 		<% @chapters.each do |chapter| %>
-			<p>
+			<div class = "chapter" style = "width: 15%; background-color: #e6f8ff; display: inline-block">
 				<!-- add an image on the side to represent the chapter -->
-
-				<%= link_to chapter.name, chapter, {style: "margin-bottom: 8px; color: black; text-decoration: none;"} %>
+				<div class = "char_title">
+					<%= link_to chapter.name, chapter, {style: "margin-bottom: 8px; color: black; text-decoration: none; width: 100%;"} %>
+				</div>
 				<!-- when chapters can be linked to profiles, add the author's name, information about whether it's editable by everyone, etc -->
-
-				<%= link_to chapter.description, chapter, {style: "margin-left: 20px; display: block; color: #333; text-decoration: none;"} %>
-			</p>
+				<div class = "char_desc">
+					<%= link_to chapter.description, chapter, {style: "margin-left: 20px; display: block; color: #333; text-decoration: none; width: 100;"} %>
+				</div>
+			</div>
 		<% end %>
 </div>
 </br>
