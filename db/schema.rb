@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20151015184224) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "chapters", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at",  null: false
@@ -27,7 +30,7 @@ ActiveRecord::Schema.define(version: 20151015184224) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "grammar_points", ["lesson_id"], name: "index_grammar_points_on_lesson_id"
+  add_index "grammar_points", ["lesson_id"], name: "index_grammar_points_on_lesson_id", using: :btree
 
   create_table "lessons", force: :cascade do |t|
     t.string   "name"
@@ -36,7 +39,7 @@ ActiveRecord::Schema.define(version: 20151015184224) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "lessons", ["chapter_id"], name: "index_lessons_on_chapter_id"
+  add_index "lessons", ["chapter_id"], name: "index_lessons_on_chapter_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -54,8 +57,8 @@ ActiveRecord::Schema.define(version: 20151015184224) do
     t.datetime "updated_at",                          null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "vocab_lists", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -64,19 +67,21 @@ ActiveRecord::Schema.define(version: 20151015184224) do
     t.string   "name"
   end
 
-  add_index "vocab_lists", ["lesson_id"], name: "index_vocab_lists_on_lesson_id"
+  add_index "vocab_lists", ["lesson_id"], name: "index_vocab_lists_on_lesson_id", using: :btree
 
   create_table "vocabs", force: :cascade do |t|
-    t.integer  "vocablist_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "vocab_list_id"
     t.string   "jp"
     t.string   "en"
     t.integer  "formality"
   end
 
-  add_index "vocabs", ["vocab_list_id"], name: "index_vocabs_on_vocab_list_id"
-  add_index "vocabs", ["vocablist_id"], name: "index_vocabs_on_vocablist_id"
+  add_index "vocabs", ["vocab_list_id"], name: "index_vocabs_on_vocab_list_id", using: :btree
 
+  add_foreign_key "grammar_points", "lessons"
+  add_foreign_key "lessons", "chapters"
+  add_foreign_key "vocab_lists", "lessons"
+  add_foreign_key "vocabs", "vocab_lists"
 end
