@@ -41,6 +41,9 @@ class ChaptersController < ApplicationController
   def update
   	#NEED TO WRITE THIS METHOD 
     @chapter = Chapter.find(params[:id])
+      if @chapter.update_attributes(chapter_params)
+        
+    @chapter.update(name: "", description: "")
     #after:??? not sure...
   end
 

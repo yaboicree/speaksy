@@ -8,6 +8,8 @@ is there a better name for this? -->
 	<!-- was a ul containing li's -->
 		<% @chapters.each do |chapter| %>
 			<p>
+				<!-- add an image on the side to represent the chapter -->
+
 				<%= link_to chapter.name, chapter, {style: "margin-bottom: 8px; color: black; text-decoration: none;"} %>
 				<!-- when chapters can be linked to profiles, add the author's name, information about whether it's editable by everyone, etc -->
 
